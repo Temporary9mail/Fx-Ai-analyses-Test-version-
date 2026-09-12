@@ -10,11 +10,11 @@
 
   Example:
   window.APP_CONFIG = {
-    TWELVE_DATA_API_KEY: "YOUR_KEY_HERE",
+    TWELVE_DATA_API_KEY: "407e0c8d63e641e0b7379977b9f2920a",
     TWELVE_DATA_BASE_URL: "https://api.twelvedata.com"
   };
 */
 window.APP_CONFIG = {
-  TWELVE_DATA_API_KEY: "",
+  TWELVE_DATA_API_KEY: "407e0c8d63e641e0b7379977b9f2920a",
   TWELVE_DATA_BASE_URL: "https://api.twelvedata.com"
 };

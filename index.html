@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Market Signal AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand"><div class="logo">AI</div><div><h1>Market Signal AI</h1><p>Chart analysis assistant</p></div></div>
+      <span class="status"><i></i> Ready</span>
+    </header>
+
+    <section class="hero">
+      <h2>Upload a chart & get an AI-assisted signal</h2>
+      <p>Upload a trading-chart screenshot. The app detects visible market information and returns a directional analysis with confidence.</p>
+
+      <label class="upload" for="chartInput">
+        <span class="uploadIcon">↥</span>
+        <strong>Upload chart screenshot</strong>
+        <small>PNG, JPG or WEBP</small>
+        <input id="chartInput" type="file" accept="image/png,image/jpeg,image/webp">
+      </label>
+
+      <div id="previewWrap" class="preview hidden">
+        <img id="preview" alt="Chart preview">
+        <button id="removeBtn" type="button">Remove</button>
+      </div>
+
+      <button id="analyzeBtn" class="analyze" disabled>Analyze Market</button>
+      <p class="hint">API keys are loaded from <code>config.js</code>. Do not publish private API keys in a public GitHub repository.</p>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="resultTop">
+        <div><span class="eyebrow">ANALYSIS RESULT</span><h3 id="marketName">Market</h3></div>
+        <div id="signal" class="signal">WAIT</div>
+      </div>
+      <div class="confidence"><span>Confidence</span><strong id="confidenceValue">0%</strong></div>
+      <div class="bar"><div id="barFill"></div></div>
+      <div class="grid">
+        <div><span>Detected timeframe</span><b id="timeframe">—</b></div>
+        <div><span>Market type</span><b id="marketType">—</b></div>
+        <div><span>Trend</span><b id="trend">—</b></div>
+        <div><span>Data status</span><b id="dataStatus">—</b></div>
+      </div>
+      <div class="reason"><span>Analysis</span><p id="reasonText"></p></div>
+      <p class="disclaimer">Educational analysis only. This is not financial advice and no signal can guarantee a profit.</p>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
